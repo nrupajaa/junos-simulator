@@ -1,0 +1,54 @@
+:root{
+  --bg:#0a0d10; --panel:#0f1418; --fg:#d6dbd4; --dim:#66736c; --line:#1d2529;
+  --grn:#8cc63f; --amb:#e0a33e; --red:#e0584c; --cy:#5fb3c4;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+  background:var(--bg); color:var(--fg);
+  font-family:"IBM Plex Mono",ui-monospace,"DejaVu Sans Mono",Menlo,Consolas,monospace;
+  font-size:13px; line-height:1.45; -webkit-text-size-adjust:100%;
+}
+#app{display:flex;flex-direction:column;height:100%}
+header{
+  display:flex;align-items:center;gap:14px;
+  padding:8px 14px;border-bottom:1px solid var(--line);
+  background:var(--panel);font-size:12px;flex:none;
+}
+header .host{color:var(--grn);font-weight:600}
+header .mode{color:var(--dim)}
+header .dot{color:var(--amb)}
+header .spacer{flex:1}
+header button{
+  background:none;border:1px solid var(--line);color:var(--dim);
+  font:inherit;font-size:11px;padding:3px 8px;border-radius:2px;cursor:pointer;
+}
+header button:hover{color:var(--fg);border-color:var(--dim)}
+header button:focus-visible,#cmd:focus-visible,.keys button:focus-visible{outline:2px solid var(--grn);outline-offset:1px}
+#screen{
+  flex:1;overflow-y:auto;overflow-x:auto;padding:10px 14px 4px;
+  white-space:pre;-webkit-overflow-scrolling:touch;
+}
+#screen span{white-space:pre}
+.dim{color:var(--dim)}
+.grn{color:var(--grn)}
+.amb{color:var(--amb)}
+.red{color:var(--red)}
+.cy{color:var(--cy)}
+#inputline{display:flex;align-items:baseline;padding:0 14px 10px;flex:none}
+#banner{padding:0 14px;color:var(--dim);font-size:13px;flex:none}
+#prompt{white-space:pre;color:var(--fg)}
+#cmd{
+  flex:1;background:none;border:none;color:var(--fg);font:inherit;
+  padding:0 0 0 0;margin:0;caret-color:var(--grn);min-width:4ch;
+}
+#cmd:focus{outline:none}
+.keys{display:none;gap:6px;padding:0 14px 10px;flex:none;flex-wrap:wrap}
+.keys button{
+  background:var(--panel);border:1px solid var(--line);color:var(--fg);
+  font:inherit;font-size:12px;padding:6px 11px;border-radius:3px;cursor:pointer;
+}
+@media (max-width:720px){ .keys{display:flex} #screen{font-size:12px} body{font-size:12px} }

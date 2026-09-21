@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Junos CLI Simulator</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <header>
+    <span class="host" id="hHost">root@junos</span>
+    <span class="mode" id="hMode">operational mode</span>
+    <span class="dot" id="hDirty" hidden>&#9679; uncommitted changes</span>
+    <span class="spacer"></span>
+    <button id="btnLabs" type="button">labs</button>
+    <button id="btnReset" type="button">reset device</button>
+  </header>
+  <div id="screen" aria-live="polite"></div>
+  <div id="banner"></div>
+  <div id="inputline">
+    <span id="prompt">root@junos&gt; </span>
+    <input id="cmd" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" aria-label="Junos command line">
+  </div>
+  <div class="keys">
+    <button data-k="tab" type="button">Tab</button>
+    <button data-k="q" type="button">?</button>
+    <button data-k="up" type="button">&#8593;</button>
+    <button data-k="down" type="button">&#8595;</button>
+    <button data-k="ctrlc" type="button">Ctrl-C</button>
+    <button data-k="pipe" type="button">|</button>
+  </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
