@@ -1,6 +1,6 @@
 # Junos CLI Simulator
 
-A browser-based simulator of the Juniper Junos command line, built for practicing lab commands without needing a VM. It runs entirely in your browser with no backend, no build step and no dependencies.
+A browser-based simulator of the Juniper Junos command line, built for commands without needing a VM. It runs entirely in your browser with no backend, no build step and no dependencies.
 
 **Live demo:** https://nrupajaa.github.io/junos-simulator/
 
